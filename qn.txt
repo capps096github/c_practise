@@ -1,0 +1,14 @@
+How are Abstract data types built using built-in data types, in other languages. except c
+
+They are built using a combination of the following:
+1. A data type that is a collection of data types
+2. A data type that is a collection of functions
+3. A data type that is a collection of variables
+
+Explanation of the above:
+1. A data type that is a collection of data types is called a composite data type. 
+2. A data type that is a collection of functions is called a composite data type.
+3. A data type that is a collection of variables is called a composite data type.
+
+
+a)What are axiom to implement array operations?

@@ -1,0 +1,166 @@
+// This file creates 2 single dimensional arrays and adds them as a single array.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+  // index
+  int i;
+
+  // first array with initalize values
+  int firstArray[5] = {1, 2, 3, 4, 5};
+
+  // second array
+  int secondArray[5] = {6, 7, 8, 9, 10};
+
+  // third array that will be a merged array of the first and second array
+  int thirdArray[10];
+
+  // merging of the first and second array starts here using for loops
+
+  // for loop for the first array
+  for (i = 0; i < 5; i++)
+  {
+    thirdArray[i] = firstArray[i];
+  }
+
+  // for loop for the second array
+  for (i = 0; i < 5; i++)
+  {
+    thirdArray[i + 5] = secondArray[i];
+  }
+
+  // printing the merged array elements  using for loops
+  for (i = 0; i < 10; i++)
+  {
+    printf("%d\n", thirdArray[i]);
+  }
+}
+
+// d)Create a two dimensional array,
+// design two separate functions that 
+// return the minimum element and maximum element 
+// with their locations.
+
+
+// creating a two dimensional array
+int twoDimensionalArray[3][4] = {
+  {1, 2, 3, 4},
+  {5, 6, 7, 8},
+  {9, 10, 11, 12}
+};
+
+// function to find the minimum element and its location
+void findMinElement(int twoDimensionalArray[3][4])
+{
+  // index
+  int i, j;
+
+  // minimum element
+  int minElement = twoDimensionalArray[0][0];
+
+  // minimum element location
+  int minElementLocation[2];
+
+  // for loop to find the minimum element
+  for (i = 0; i < 3; i++)
+  {
+    for (j = 0; j < 4; j++)
+    {
+      if (twoDimensionalArray[i][j] < minElement)
+      {
+        minElement = twoDimensionalArray[i][j];
+        minElementLocation[0] = i;
+        minElementLocation[1] = j;
+      }
+    }
+  }
+
+  // printing the minimum element and its location
+  printf("\n\nThe minimum element is %d and its location is %d, %d\n", minElement, minElementLocation[0], minElementLocation[1]);
+}
+
+
+// function to find the maximum element and its location
+void findMaxElement(int twoDimensionalArray[3][4])
+{
+  // index
+  int i, j;
+
+  // maximum element
+  int maxElement = twoDimensionalArray[0][0];
+
+  // maximum element location
+  int maxElementLocation[2];
+
+  // for loop to find the maximum element
+  for (i = 0; i < 3; i++)
+  {
+    for (j = 0; j < 4; j++)
+    {
+      if (twoDimensionalArray[i][j] > maxElement)
+      {
+        maxElement = twoDimensionalArray[i][j];
+        maxElementLocation[0] = i;
+        maxElementLocation[1] = j;
+      }
+    }
+  }
+
+  // printing the maximum element and its location
+  printf("\n\nThe maximum element is %d and its location is %d, %d\n", maxElement, maxElementLocation[0], maxElementLocation[1]);
+}
+
+// b)Traversal of single dimension,
+//  2-dimention and 3-dimension arrays
+//  and determine the base address of each array
+
+// a)Traversal of single dimension array
+void traversalOfSingleDimensionArray(int singleDimensionArray[5])
+{
+  // index
+  int i;
+
+  // traversal of the single dimension array
+  for (i = 0; i < 5; i++)
+  {
+    printf("%d\n", singleDimensionArray[i]);
+  }
+}
+
+// b)Traversal of two dimensional array
+void traversalOfTwoDimensionalArray(int twoDimensionalArray[3][4])
+{
+  // index
+  int i, j;
+
+  // traversal of the two dimensional array
+  for (i = 0; i < 3; i++)
+  {
+    for (j = 0; j < 4; j++)
+    {
+      printf("%d\n", twoDimensionalArray[i][j]);
+    }
+  }
+}
+
+// c)Traversal of three dimensional array
+void traversalOfThreeDimensionalArray(int threeDimensionalArray[2][3][4])
+{
+  // index
+  int i, j, k;
+
+  // traversal of the three dimensional array
+  for (i = 0; i < 2; i++)
+  {
+    for (j = 0; j < 3; j++)
+    {
+      for (k = 0; k < 4; k++)
+      {
+        printf("%d\n", threeDimensionalArray[i][j][k]);
+      }
+    }
+  }
+}
